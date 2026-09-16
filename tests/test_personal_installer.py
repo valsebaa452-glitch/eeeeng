@@ -30,7 +30,7 @@ class PersonalInstallerTests(unittest.TestCase):
     def test_prepare_is_idempotent_and_explicitly_local(self):
         first = self.run_installer()
         self.assertEqual(first.returncode, 0, first.stderr)
-        self.assertIn("27/27", first.stdout)
+        self.assertIn("30/30", first.stdout)
         self.assertIn("NO ha importado", first.stdout)
         second = self.run_installer()
         self.assertEqual(second.returncode, 0, second.stderr)

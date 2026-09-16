@@ -1,0 +1,70 @@
+{
+  "checked_on": "2026-09-16",
+  "scope": "Observed native Hoplite calls in the installation thread; not acceptance in a fresh thread from the published revision.",
+  "new_skills_loaded_with_load_skill": [
+    "market-sizing",
+    "business-acquisition-due-diligence",
+    "public-procurement-screening"
+  ],
+  "mcp_name": "research-business-math",
+  "native_namespace": "mcp_server_5",
+  "catalog_complete": true,
+  "catalog_tools": [
+    "acquisition_cash_bridge",
+    "cohort_retention",
+    "market_size",
+    "monthly_economics"
+  ],
+  "operations": [
+    {
+      "tool": "market_size",
+      "input_fixture": "examples/research-math.json:market",
+      "observed": {
+        "tam": "1200000.00",
+        "sam": "240000.00",
+        "som_scenario": "12000.00",
+        "scenario_customers": 10,
+        "not_a_forecast": true
+      },
+      "matches_expected": true
+    },
+    {
+      "tool": "acquisition_cash_bridge",
+      "input_fixture": "examples/research-math.json:cash_bridge",
+      "observed": {
+        "normalized_ebitda": "75000.00",
+        "cash_after_listed_costs": "20000.00",
+        "not_a_forecast": true
+      },
+      "matches_expected": true
+    },
+    {
+      "tool": "monthly_economics",
+      "input_fixture": "tools/hoplite-research/scripts/research_client.py:check_business_math monthly scenario",
+      "observed": {
+        "gross_revenue": 1000,
+        "operating_result_before_tax": 390,
+        "human_hours": 19,
+        "cash_before_founder_pay": 770,
+        "conditional_break_even_clients": 4
+      },
+      "matches_expected": true
+    },
+    {
+      "tool": "cohort_retention",
+      "input_fixture": "tools/hoplite-research/scripts/research_client.py:check_business_math cohort rows",
+      "observed": {
+        "periods": [
+          {"period": 1, "retained": 9, "retention": 0.6, "eligible_observed": 15},
+          {"period": 2, "retained": 0, "retention": null, "eligible_observed": 0}
+        ]
+      },
+      "matches_expected": true
+    }
+  ],
+  "external_api_calls_for_these_operations": 0,
+  "inputs": "synthetic_only",
+  "fresh_thread_acceptance": "not_checked",
+  "personal_library_imported": false,
+  "model_quality_benchmark_executed": false
+}

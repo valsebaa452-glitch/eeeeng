@@ -17,6 +17,44 @@
           ]
         }
       ]
+    },
+    {
+      "name": "market-sizing",
+      "path": "market-sizing/SKILL.md",
+      "export_root_sha256": "ab5f4b6095f44220797a1373628cc09d7cdd205d2c236fa774ce4bdda5a90948",
+      "source_root_sha256": "ab5f4b6095f44220797a1373628cc09d7cdd205d2c236fa774ce4bdda5a90948",
+      "reviewed_at": "2026-09-16",
+      "attributions": [],
+      "origin": "project-authored",
+      "references": [
+        "https://www.sba.gov/counseling/plan-your-business/#market-research",
+        "https://worldbank.github.io/data360-mcp/"
+      ]
+    },
+    {
+      "name": "business-acquisition-due-diligence",
+      "path": "business-acquisition-due-diligence/SKILL.md",
+      "export_root_sha256": "d877571bcc2bd85ff305b92a790e38b2e2771a3766f80879a2ce7c35c2782bed",
+      "source_root_sha256": "d877571bcc2bd85ff305b92a790e38b2e2771a3766f80879a2ce7c35c2782bed",
+      "reviewed_at": "2026-09-16",
+      "attributions": [],
+      "origin": "project-authored",
+      "references": [
+        "https://www.sba.gov/counseling/plan-your-business/"
+      ]
+    },
+    {
+      "name": "public-procurement-screening",
+      "path": "public-procurement-screening/SKILL.md",
+      "export_root_sha256": "042bfa3f75323bcf17511777a818d7f10b15fac3edcd1f0a6511b408899b025c",
+      "source_root_sha256": "042bfa3f75323bcf17511777a818d7f10b15fac3edcd1f0a6511b408899b025c",
+      "reviewed_at": "2026-09-16",
+      "attributions": [],
+      "origin": "project-authored",
+      "references": [
+        "https://www.sba.gov/counseling/get-started/#basic-requirements",
+        "https://api.usaspending.gov/docs/"
+      ]
     }
   ]
 }

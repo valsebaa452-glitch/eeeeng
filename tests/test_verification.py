@@ -5,6 +5,7 @@ import shutil
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path[:0] = [str(ROOT / "scripts"), str(ROOT / "tools/hoplite-research/scripts")]
@@ -37,12 +38,26 @@ class ResultTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             asyncio.run(check(False, ["missing-server"]))
 
+    def test_local_math_is_functional_without_live_flag_or_remote_transport(self):
+        with patch("research_client.public_http_client", side_effect=AssertionError("No remote transport expected")):
+            report = asyncio.run(check(False, ["business-math"]))
+        self.assertTrue(report["passed"], report)
+        self.assertEqual(set(report["servers"]), {"business-math"})
+        result = report["servers"]["business-math"]
+        self.assertEqual(result["functional_status"], "passed")
+        self.assertEqual(result["native_discovery"], "not_checked")
+        self.assertEqual(set(result["functional_operations"]), {
+            "monthly_economics", "cohort_retention", "market_size", "acquisition_cash_bridge",
+        })
+
 
 class IntegrityTests(unittest.TestCase):
     def test_all_imported_skills_and_dependencies_match(self):
         report = verify()
         self.assertEqual(report["imported_skills_verified"], 26)
-        self.assertEqual(report["skills_verified"], 27)
+        self.assertEqual(report["skills_verified"], 30)
+        self.assertEqual(report["additional_skills_verified"], 4)
+        self.assertEqual(report["mcp_configured"], 5)
 
     def test_unregistered_root_cannot_be_activated_silently(self):
         with tempfile.TemporaryDirectory() as folder:

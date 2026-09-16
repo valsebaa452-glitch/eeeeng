@@ -6,6 +6,7 @@
     "ai-opportunity-validation",
     "ai-service-evaluation",
     "analytics-tracking",
+    "business-acquisition-due-diligence",
     "cohort-analysis",
     "competitive-intelligence",
     "competitor-alternatives",
@@ -17,10 +18,12 @@
     "launch-strategy",
     "lead-research-assistant",
     "market-customer-research",
+    "market-sizing",
     "page-cro",
     "pricing-strategy",
     "product-manager-toolkit",
     "public-data-analysis",
+    "public-procurement-screening",
     "research-team",
     "scholarly-metadata",
     "seo-audit",
@@ -32,7 +35,10 @@
   ],
   "original_skill_count": 26,
   "additional_skills": [
-    "cohort-analysis"
+    "cohort-analysis",
+    "market-sizing",
+    "business-acquisition-due-diligence",
+    "public-procurement-screening"
   ],
   "mcp_servers": [
     {
@@ -50,6 +56,10 @@
     {
       "name": "research-firecrawl",
       "transport": "http"
+    },
+    {
+      "name": "research-business-math",
+      "transport": "stdio"
     }
   ],
   "files": {
@@ -68,6 +78,10 @@
     ".agents/skills/analytics-tracking/SKILL.md": {
       "sha256": "02bb5a9de086b69157f582e9a002d08778914d0aab88518a4620ec9358541d36",
       "bytes": 5986
+    },
+    ".agents/skills/business-acquisition-due-diligence/SKILL.md": {
+      "sha256": "d877571bcc2bd85ff305b92a790e38b2e2771a3766f80879a2ce7c35c2782bed",
+      "bytes": 4161
     },
     ".agents/skills/cohort-analysis/SKILL.md": {
       "sha256": "db4ea78b492610d8c95f793b4bc533cd24da481648e59824fa82aae6d5821d7f",
@@ -113,6 +127,10 @@
       "sha256": "271effe90edd7ff22493782e0b08637aa7db2b71d94db2348654cbf23ed13d82",
       "bytes": 3432
     },
+    ".agents/skills/market-sizing/SKILL.md": {
+      "sha256": "ab5f4b6095f44220797a1373628cc09d7cdd205d2c236fa774ce4bdda5a90948",
+      "bytes": 3852
+    },
     ".agents/skills/page-cro/SKILL.md": {
       "sha256": "a77c31525dc0d39cd71cf6ba43309da4608d2782b684815e3fee7bee2820ba07",
       "bytes": 5903
@@ -128,6 +146,10 @@
     ".agents/skills/public-data-analysis/SKILL.md": {
       "sha256": "711992f7511b4719d5b1740cffa954505f6732317760af8f9b1d577d707ebc91",
       "bytes": 2760
+    },
+    ".agents/skills/public-procurement-screening/SKILL.md": {
+      "sha256": "042bfa3f75323bcf17511777a818d7f10b15fac3edcd1f0a6511b408899b025c",
+      "bytes": 3625
     },
     ".agents/skills/research-team/SKILL.md": {
       "sha256": "217908c6c5d6a7340c2a2f5d0b5b54121cc007ce4c77df0990bcdf7277ecc012",
@@ -178,8 +200,8 @@
       "bytes": 171
     },
     ".hoplite/settings.json": {
-      "sha256": "bf044d7a78f43f12f622f92de3e460e53aad2dd82b51e2eb8e63bc085a12213a",
-      "bytes": 946
+      "sha256": "bf09e26ff077b2ad9eb1980c53228e894d55fe95228b0945d2e95be7a948d8e7",
+      "bytes": 1184
     },
     ".hoplite/setup.sh": {
       "sha256": "d1bde3cdc1ab3e1558351105a2434ac1cf683e1f14a2afae5b9e071075dadef5",
@@ -190,28 +212,32 @@
       "bytes": 1691
     },
     "LEEME-PRIMERO.md": {
-      "sha256": "e0f3361c1d8467b985070341b7fd34b9b882aa221cff833ba32e4a6d9e8717cd",
-      "bytes": 9973
+      "sha256": "92a849da2c2ff7c5c3fec352454b24fc374fa82e3d8a69804080d087ecbab167",
+      "bytes": 11437
     },
     "PROMPT-PARA-HOPLITE.txt": {
-      "sha256": "0200a09f7f2e6e44391f86d759a18d6e9688d0f426e5ba559cbbdee432300df0",
-      "bytes": 3562
+      "sha256": "e7878fdced73ccb33528dd13a2e1a206ca4d25e8604912ca9d06010ce88500b3",
+      "bytes": 3830
     },
     "README.md": {
-      "sha256": "e0f3361c1d8467b985070341b7fd34b9b882aa221cff833ba32e4a6d9e8717cd",
-      "bytes": 9973
+      "sha256": "92a849da2c2ff7c5c3fec352454b24fc374fa82e3d8a69804080d087ecbab167",
+      "bytes": 11437
+    },
+    "docs/business-research-guide.md": {
+      "sha256": "3f00f23b0df7eecd8b8ec358d5ab11e609f8deb4b844b7e66bde5ddd5cb36704",
+      "bytes": 6948
     },
     "docs/maintenance.md": {
-      "sha256": "0470cb781691d31b2f44fe242c4e5389d1d011a454221c2f7bf8d46d52748024",
-      "bytes": 6250
+      "sha256": "1a4149defecaa8217f4c7190c1de195f1743b9b05e1e896e2ab4df144f015570",
+      "bytes": 6557
     },
     "docs/provenance/action-pins.json": {
       "sha256": "e0271b97f83beb9a9f9405be9ef87f3eb723647721ba144de269db105e77e3a4",
       "bytes": 6454
     },
     "docs/provenance/additional-skills.json": {
-      "sha256": "c3a3b6738625b178feec5bdaf8b85646e2fd6f2a357813d5aec4bf2bd8663d4e",
-      "bytes": 772
+      "sha256": "9772201287ebe69e670e9ac643bda11c1b2c787f2bbd66cea03d3b91886b6221",
+      "bytes": 2361
     },
     "docs/provenance/attachment-integrity.json": {
       "sha256": "50146f4436401e780b99da772d8edb12b5752d7513c8e5b024848b16f8fa369d",
@@ -233,6 +259,14 @@
       "sha256": "fa7278a94a838fb36ee62383acbed6be3371b981f83695b785b4cdfd81484581",
       "bytes": 346
     },
+    "examples/research-evaluation.json": {
+      "sha256": "347b0fdd7dda5a7f3eba82d1227c4fe0c3ba6ad6f074ba3489c8a69a827cc310",
+      "bytes": 2481
+    },
+    "examples/research-math.json": {
+      "sha256": "ff91be5d5bbbb87195422d85355ae9e908c1f47aa4037507ba1dedebeb469551",
+      "bytes": 664
+    },
     "scripts/business_math.py": {
       "sha256": "bacef0cd6e411d990288f57fc91dc6312413c928857e5ec507abaf3d11952a4d",
       "bytes": 4895
@@ -242,8 +276,12 @@
       "bytes": 7134
     },
     "scripts/exportar_kit.py": {
-      "sha256": "29587099bbee89a5f3c2b28a463adda6af4bcb86268200c74657b12768483dff",
-      "bytes": 8122
+      "sha256": "1a1ce21695a3ac7170a6f515ef14e24f57458a6a7f267b3ebf2c83340dba4e01",
+      "bytes": 8800
+    },
+    "scripts/research_math.py": {
+      "sha256": "34bdb6ca44bb476e35d190173ce19ec4f5877138402740817231f80928533f24",
+      "bytes": 5153
     },
     "scripts/verify_toolkit.py": {
       "sha256": "6140380a6843b534142f8a8580a59d516ac400f99ff66beec06eadb004d61892",
@@ -253,21 +291,29 @@
       "sha256": "893682eedcb906b10375cfde5c5d074715d11a91fe94f2257a7fd5ee8ac7c4ab",
       "bytes": 2894
     },
+    "tests/test_business_math_mcp.py": {
+      "sha256": "589b244bb358f67f6fbf4d2c0eecc94bcd04d69030f1ff2501d6b44ff77a4189",
+      "bytes": 14357
+    },
     "tests/test_mcp_regressions.py": {
       "sha256": "3cc78c134834a0229ad2840f8861f571e01682af2d23226bd763a2dc918374fd",
       "bytes": 13341
     },
     "tests/test_personal_installer.py": {
-      "sha256": "53a7609b0195132597411e47e46050b9d6ffbe78deeb5406b3ac1040816138ea",
+      "sha256": "6c61291c0b0b921997e72b5fdd67a846ccd5e9a7533869ed82d49e8f31b4714e",
       "bytes": 3267
     },
     "tests/test_portable_bundle.py": {
-      "sha256": "c0349852e752d9b082695699216045b1ac218fa2bc0a825bde587667a6fa20ee",
-      "bytes": 8460
+      "sha256": "db6bcadcdfb5a21a46fc7ea258c0aea77e295cd228605cc99a8868c95aba158d",
+      "bytes": 9087
     },
     "tests/test_readability.py": {
       "sha256": "3bd0af6b2ef6eeed0defcfae55f82c9cdc83ad27097c707ca0f3258a4dbb9202",
       "bytes": 1579
+    },
+    "tests/test_research_math.py": {
+      "sha256": "6e97e9c83cbd2c39a27df55525e1e1d2dbe6d4fdf3129b04dcc684d6b021b4ea",
+      "bytes": 9679
     },
     "tests/test_research_runtime.py": {
       "sha256": "d9b5cf45c8ffb127e0ba7bd262e096281fb1d82dddac077f021c9f8dfd9f44eb",
@@ -278,8 +324,8 @@
       "bytes": 2771
     },
     "tests/test_verification.py": {
-      "sha256": "0de66507a84ff436f1c83977b7bc29afd8dc34a3ed7244e5487ba3ac6b017d4a",
-      "bytes": 3124
+      "sha256": "7d9d5ca33936685c404908a500c489bd14c0a3af17d2285371fdc69738c9d42f",
+      "bytes": 4017
     },
     "tools/hoplite-research/.hoplite/readability/package-lock.json": {
       "sha256": "4797c3b64db0c2edece89e40576c08304637984be19ebbf237d20fd7287d35ed",
@@ -297,21 +343,29 @@
       "sha256": "d2c9d5822837980baddd2b68543ab6f259e3d581b951ed8bcb9e595a325e5c68",
       "bytes": 308
     },
+    "tools/hoplite-research/scripts/business_math_mcp.py": {
+      "sha256": "3e113ba808b1ad2a4dc494bef145286d75c29f0b88488f9deb16ac2bf4923a85",
+      "bytes": 7030
+    },
     "tools/hoplite-research/scripts/mcp_runtime.py": {
-      "sha256": "ba947d5b08788e6b70fb560fdbd1da20166378cdd650814b47f9fa8057fb541b",
-      "bytes": 6712
+      "sha256": "8b58bdff9a8c38a0e16bbd354e10008f11788ac2abdec009138d33810a9c036e",
+      "bytes": 7052
     },
     "tools/hoplite-research/scripts/prepare_readability.py": {
       "sha256": "3c378c4ddd45bffce2c2a565c5a7d5ef81ce29a8ea05eb8a1e600d302f997daa",
       "bytes": 2357
     },
     "tools/hoplite-research/scripts/research_client.py": {
-      "sha256": "6012e3a9b72c4cceba9f02a7268633924491c4d5a6d9f62f19b0d1b9d580f223",
-      "bytes": 11333
+      "sha256": "6c322a3ed591b71dccc665189960edcf89335130a180d56825533aed193a1a9b",
+      "bytes": 13652
     },
     "tools/hoplite-research/scripts/research_mcp.py": {
       "sha256": "59a644c7912066ffdb37084e37449c3239c35fd5c53277b6bcfe97ad58b0b5f0",
       "bytes": 3449
+    },
+    "tools/hoplite-research/scripts/run_business_math_mcp.py": {
+      "sha256": "ae23e5a651cf074fc51d58949c1520518ec22f946dc61b2c2492bfee9ea253e4",
+      "bytes": 602
     },
     "tools/hoplite-research/scripts/run_mcp.py": {
       "sha256": "718a04f694a2b43d58e15683b2f6d29ed7113946339def38283158deb00378ea",

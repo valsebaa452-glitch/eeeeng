@@ -3,6 +3,15 @@
 Fecha de verificación: **2026-09-16**. Esta evidencia corresponde al repositorio
 destino `valsebaa452-glitch/eeeeng`, no a una ejecución de la cuenta de origen.
 
+**Alcance histórico:** los recuentos 27 skills, cuatro MCP y 70 pruebas siguientes
+documentan la instalación base publicada en
+`a729cc0d3114aca5f7f14830ca04bc0819aeb38b`. Se conservan sus resultados y fallos.
+La ampliación a 30 skills y cinco MCP se documenta por separado en
+[su informe de verificación](../reports/research-capabilities/2026-09-16/verification.md).
+El ZIP original no se modificó; el manifiesto de la revisión actual corresponde
+al paquete ampliado. La [guía de uso](business-research-guide.md) explica las
+nuevas capacidades, los límites y cómo ahorrar consultas.
+
 ## Integridad y alcance
 
 - Se leyeron `LEEME-PRIMERO.md`, `PROMPT-PARA-HOPLITE.txt`, `AGENTS.md`, el
@@ -156,7 +165,10 @@ resultado y sus límites están en `local_catalog_verification` de
 [`checks.json`](../reports/installation/checks.json).
 
 Si se desea esta importación, ejecutar en **la terminal privada del usuario**,
-desde el kit completo y con una versión de Node compatible:
+desde el kit completo y con una versión de Node compatible. Las instrucciones
+siguientes se aplican al kit ampliado de **30 skills**; el resultado histórico
+27/27 anterior no prueba su importación personal. Consultar también la
+[guía actual del paquete](../LEEME-PRIMERO.md):
 
 ```sh
 npm ci --prefix tools/personal-skills --ignore-scripts --no-audit --no-fund --engine-strict --registry=https://registry.npmjs.org
@@ -171,9 +183,9 @@ indica una API key creada en **Settings → Workspace → API keys**: gestionarl
 solo mediante el flujo oficial en el equipo privado, nunca en este chat o Git.
 No reutilizar sesiones de otra cuenta ni usar `onboard` para resolver este paso.
 Cancelar la confirmación o encontrar nombres existentes no equivale a importar
-27 skills nuevas.
+30 skills nuevas.
 
-Comprobar después las 27 skills como ese usuario en **otro proyecto sin copias
+Comprobar después las 30 skills como ese usuario en **otro proyecto sin copias
 locales**. Las skills personales no se aplican a automations y una copia del
 repositorio con el mismo nombre tiene prioridad.
 
@@ -191,13 +203,16 @@ flujo autorizado. En el hilo nuevo, pedir:
 
 > Verifica esta instalación sin volver a copiar el ZIP ni importar mi biblioteca
 > personal. Espera a que termine el setup versionado del nuevo sandbox.
-> Comprueba el SHA de la revisión y el setup efectivo; valida los 27 nombres y
-> hashes del manifiesto y carga cada skill con `load_skill`. Descubre los cuatro
+> Comprueba el SHA de la revisión y el setup efectivo; valida los 30 nombres y
+> hashes del manifiesto ampliado y carga cada skill con `load_skill`. Descubre los cinco
 > MCP con las herramientas nativas de este nuevo run y realiza una operación
 > pública acotada por servidor: Fetch sobre example.com; arXiv buscando
 > Attention Is All You Need, máximo 2 resultados; Context7 resolviendo MCP Python
-> SDK; Firecrawl Scrape de example.com en markdown. No uses Parse ni datos
-> privados. Separa instalación, inicialización, catálogo y funcionamiento;
+> SDK; research-business-math con sus cuatro cálculos sintéticos documentados,
+> sin red. Firecrawl Scrape de example.com en markdown solo cuando su acceso
+> esté autorizado y disponible; mientras siga pendiente, no reintentes. No uses Parse ni datos
+> privados. Si falta cuota, marca las operaciones externas pendientes en vez de
+> repetirlas o eludir límites. Separa instalación, inicialización, catálogo y funcionamiento;
 > conserva errores de autenticación, cuota o transporte sin eludirlos. No
 > presentes una prueba del cliente Python como prueba de disponibilidad nativa.
 

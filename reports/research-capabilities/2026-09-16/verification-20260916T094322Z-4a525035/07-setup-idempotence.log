@@ -1,0 +1,15 @@
+{
+  "skills_verified": 30,
+  "imported_skills_verified": 26,
+  "additional_skills_verified": 4,
+  "mcp_configured": 5
+}
+Resolved 56 packages in 29ms
+Audited 54 packages in 2ms
+
+added 40 packages in 1s
+Research dependencies installed. Run: .venv/bin/python scripts/research_client.py check --live
+npm warn Unknown env config "store-dir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+added 10 packages in 672ms
+Project skills and MCP dependencies ready. Personal-library import and live checks are separate.

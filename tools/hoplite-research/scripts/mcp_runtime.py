@@ -32,6 +32,12 @@ SERVERS = {
         "url": "https://mcp.firecrawl.dev/v2/mcp",
         "tools": frozenset({"firecrawl_search", "firecrawl_scrape", "firecrawl_parse"}),
     },
+    "business-math": {
+        "script": "business_math_mcp.py",
+        "tools": frozenset({
+            "monthly_economics", "cohort_retention", "market_size", "acquisition_cash_bridge",
+        }),
+    },
 }
 LOCAL_SERVERS = tuple(name for name, definition in SERVERS.items() if "module" in definition)
 ARXIV_ID = re.compile(r"(?:\d{4}\.\d{4,5}|[A-Za-z][A-Za-z.-]*/\d{7})(?:v[1-9]\d*)?")
@@ -101,6 +107,10 @@ def validate_call(server, name, arguments):
         raise ValueError("This capability is not enabled in the research profile")
     if not isinstance(arguments, dict):
         raise ValueError("Tool arguments must be an object")
+    if server == "business-math":
+        from business_math_mcp import calculate
+        calculate(name, arguments)
+        return
     for argument, (minimum, maximum) in ARGUMENT_LIMITS.items():
         if argument in arguments:
             value = arguments[argument]

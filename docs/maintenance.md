@@ -12,13 +12,14 @@
 | Skills locales sin upstream externo | Inventario explícito en el informe | Cambios mantenidos y revisados en este repositorio. |
 | Puentes e instalador adaptados del ZIP | Mantenimiento local: el paquete no declara un feed de actualizaciones propio | No se sustituye código desde un origen supuesto; cualquier cambio se revisa y prueba. |
 | MCP HTTP | Pruebas semanales de catálogo y contenido | El proveedor controla su servicio; un cambio o error no autoriza herramientas nuevas. |
+| MCP matemático local | Pruebas de fórmulas, límites y transporte stdio en la suite offline | Cambios revisados en el repositorio; sin consultas ni dependencias externas adicionales. |
 | Skills personales de la cuenta | No hay sincronización autenticada desatendida configurada | Importación y verificación separadas; no guardar una clave personal en Actions para simular alcance global. |
 | Runtimes de Hoplite | Administrados por la plataforma | No se afirma actualizar la imagen base desde este repositorio. Las versiones explícitas de CI se revisan cuando cambie la compatibilidad. |
 
 ## Workflows
 
 - `verify.yml`: setup fijado, pruebas offline y segundo setup para verificar idempotencia. Token de solo lectura; sin secretos de investigación ni login de cuenta.
-- `maintenance.yml`: lunes a las **06:17 UTC**, además de ejecución manual; solo rama predeterminada. Máximo 20 minutos, sin bucles de reintentos. Consulta fuentes y prueba los cuatro MCP con datos públicos.
+- `maintenance.yml`: lunes a las **06:17 UTC**, además de ejecución manual; solo rama predeterminada. Máximo 20 minutos, sin bucles de reintentos. Consulta fuentes y prueba los cuatro MCP de fuentes externas con datos públicos, además de los cuatro cálculos sintéticos del MCP matemático local: cinco servidores en total.
 - La rama `automation/toolkit-maintenance` mantiene una PR de evidencia. Se limita la escritura a `reports/*.json`. Un fallo de consulta se conserva y hace fallar el workflow; `continue-on-error` únicamente permite guardar evidencia antes de ese fallo final.
 - Un artefacto independiente por ejecución conserva los dos informes y el historial de esa ejecución durante 30 días, incluso si falla publicar la PR. Solo incluye esos JSON públicos, nunca el runtime, las credenciales o directorios completos del sandbox.
 - Los PR de Dependabot proponen los cambios de paquetes por separado. Ningún workflow fusiona automáticamente.

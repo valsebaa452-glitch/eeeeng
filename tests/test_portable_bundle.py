@@ -35,20 +35,28 @@ class PortableBundleTests(unittest.TestCase):
     def test_all_skills_mcp_and_hidden_configuration_are_included(self):
         files = payload(self.root)
         inventory = json.loads(files[MANIFEST])
-        self.assertEqual(len(inventory["skills"]), 27)
+        self.assertEqual(len(inventory["skills"]), 30)
         self.assertEqual(inventory["original_skill_count"], 26)
-        self.assertEqual(inventory["additional_skills"], ["cohort-analysis"])
-        self.assertEqual(len(inventory["mcp_servers"]), 4)
+        self.assertEqual(inventory["additional_skills"], [
+            "cohort-analysis", "market-sizing", "business-acquisition-due-diligence",
+            "public-procurement-screening",
+        ])
+        self.assertEqual(len(inventory["mcp_servers"]), 5)
         guide = files["LEEME-PRIMERO.md"].decode()
         for name in inventory["skills"]:
             self.assertIn(f"`{name}`", guide)
         for server in inventory["mcp_servers"]:
             self.assertIn(f"`{server['name']}`", guide)
         for name in (".hoplite/settings.json", ".hoplite/setup.sh", ".github/dependabot.yml",
-                     "tools/hoplite-research/uv.lock", "tools/personal-skills/package-lock.json"):
+                     "tools/hoplite-research/uv.lock", "tools/personal-skills/package-lock.json",
+                     "tools/hoplite-research/scripts/business_math_mcp.py",
+                     "tools/hoplite-research/scripts/run_business_math_mcp.py", "scripts/research_math.py",
+                     "tests/test_business_math_mcp.py", "tests/test_research_math.py",
+                     "examples/research-math.json", "examples/research-evaluation.json",
+                     "docs/business-research-guide.md"):
             self.assertIn(name, inventory["files"])
         self.assertEqual(files["README.md"], files["LEEME-PRIMERO.md"])
-        self.assertEqual(len([name for name in files if name.endswith("/SKILL.md")]), 27)
+        self.assertEqual(len([name for name in files if name.endswith("/SKILL.md")]), 30)
 
     def test_export_is_reproducible_and_has_safe_unique_paths(self):
         first = archive_bytes(self.root)
@@ -82,8 +90,8 @@ class PortableBundleTests(unittest.TestCase):
         self.assertFalse((root / ".git").exists())
         self.assertFalse((root / "tools/hoplite-research/.venv").exists())
         result = verify_directory(root)
-        self.assertEqual(result["skills_verified"], 27)
-        self.assertEqual(result["mcp_configured"], 4)
+        self.assertEqual(result["skills_verified"], 30)
+        self.assertEqual(result["mcp_configured"], 5)
         self.assertFalse(result["personal_library_imported"])
         self.assertFalse(result["live_mcp_checked"])
 
@@ -99,7 +107,8 @@ class PortableBundleTests(unittest.TestCase):
     def test_changed_remote_endpoint_is_rejected(self):
         path = self.root / ".hoplite/settings.json"
         settings = json.loads(path.read_text())
-        settings["mcpServers"][-1]["config"]["url"] += "?token=PRIVATE_TEST_VALUE"
+        remote = next(server for server in settings["mcpServers"] if server["name"] == "research-firecrawl")
+        remote["config"]["url"] += "?token=PRIVATE_TEST_VALUE"
         path.write_text(json.dumps(settings))
         with self.assertRaisesRegex(ValueError, "credential-free"):
             archive_bytes(self.root)
@@ -109,7 +118,7 @@ class PortableBundleTests(unittest.TestCase):
         settings = json.loads(path.read_text())
         settings["mcpServers"].pop()
         path.write_text(json.dumps(settings))
-        with self.assertRaisesRegex(ValueError, "four MCP"):
+        with self.assertRaisesRegex(ValueError, "five MCP"):
             archive_bytes(self.root)
 
     def test_changed_skill_is_rejected(self):

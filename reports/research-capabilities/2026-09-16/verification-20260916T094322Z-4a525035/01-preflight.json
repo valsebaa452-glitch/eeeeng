@@ -1,0 +1,66 @@
+{
+  "head": "a729cc0d3114aca5f7f14830ca04bc0819aeb38b",
+  "network_used": false,
+  "original_skills": {
+    "unchanged": true,
+    "roots": [
+      "ab-test-setup",
+      "ai-opportunity-validation",
+      "ai-service-evaluation",
+      "analytics-tracking",
+      "cohort-analysis",
+      "competitive-intelligence",
+      "competitor-alternatives",
+      "copywriting",
+      "customer-discovery",
+      "deep-web-research",
+      "distribution-validation",
+      "free-tool-strategy",
+      "launch-strategy",
+      "lead-research-assistant",
+      "market-customer-research",
+      "page-cro",
+      "pricing-strategy",
+      "product-manager-toolkit",
+      "public-data-analysis",
+      "research-team",
+      "scholarly-metadata",
+      "seo-audit",
+      "source-fact-checking",
+      "tool-due-diligence",
+      "trend-analysis",
+      "unit-economics",
+      "web-search-strategy"
+    ],
+    "files": 27
+  },
+  "original_mcp_records": {
+    "unchanged": true,
+    "names": [
+      "research-fetch",
+      "research-arxiv",
+      "research-context7",
+      "research-firecrawl"
+    ]
+  },
+  "added_mcp_records": [
+    "research-business-math"
+  ],
+  "dependencies": {
+    "unchanged": true,
+    "paths": [
+      "tools/hoplite-research/.hoplite/readability/package-lock.json",
+      "tools/hoplite-research/.hoplite/readability/package.json",
+      "tools/hoplite-research/pyproject.toml",
+      "tools/hoplite-research/uv.lock",
+      "tools/personal-skills/.npmrc",
+      "tools/personal-skills/package-lock.json",
+      "tools/personal-skills/package.json"
+    ]
+  },
+  "readme_matches_head_leeme": true,
+  "readme_before_sha256": "e0f3361c1d8467b985070341b7fd34b9b882aa221cff833ba32e4a6d9e8717cd",
+  "current_leeme_sha256": "92a849da2c2ff7c5c3fec352454b24fc374fa82e3d8a69804080d087ecbab167",
+  "preserved_history_file_count": 5,
+  "passed": true
+}

@@ -1,0 +1,22 @@
+{
+  "checked_at": "2026-09-16T09:49:29.562117+00:00",
+  "unexpected_changes_to_preflight_files": [
+    "reports/research-capabilities/2026-09-16/sources.md"
+  ],
+  "expected_parent_report_updates": [],
+  "original_history_or_installation_changes": [],
+  "original_skill_changes": [],
+  "original_mcp_record_changes": [],
+  "dependency_or_lockfile_changes": [],
+  "head_unchanged": true,
+  "index_unchanged": true,
+  "staged_paths": [],
+  "new_history_files": [
+    ".research/checks/20260916T094608.860350Z-da4f27270e284ef795541e414ed69c21.json"
+  ],
+  "failed_live_report_preserved": true,
+  "live_report_sha256": "559b6db3e5b604e416446ce49fbf747c42222d6c1db715823c368f8c2e573c50",
+  "firecrawl_status": "failed",
+  "firecrawl_functional_status": "failed",
+  "passed": false
+}

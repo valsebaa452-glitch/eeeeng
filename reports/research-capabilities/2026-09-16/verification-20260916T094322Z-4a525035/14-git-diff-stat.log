@@ -1,0 +1,14 @@
+ .hoplite/settings.json                            |  9 +++
+ LEEME-PRIMERO.md                                  | 30 ++++---
+ MANIFIESTO-PAQUETE.json                           | 98 ++++++++++++++++++-----
+ PROMPT-PARA-HOPLITE.txt                           | 10 +--
+ README.md                                         | 30 ++++---
+ docs/installation-verification.md                 | 19 ++++-
+ docs/provenance/additional-skills.json            | 38 +++++++++
+ scripts/exportar_kit.py                           | 26 ++++--
+ tests/test_personal_installer.py                  |  2 +-
+ tests/test_portable_bundle.py                     | 27 ++++---
+ tests/test_verification.py                        | 17 +++-
+ tools/hoplite-research/scripts/mcp_runtime.py     | 10 +++
+ tools/hoplite-research/scripts/research_client.py | 40 ++++++++-
+ 13 files changed, 282 insertions(+), 74 deletions(-)

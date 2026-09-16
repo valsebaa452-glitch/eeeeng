@@ -1,6 +1,6 @@
 # Llevar todas las skills y MCP a otra cuenta de Hoplite
 
-Este paquete contiene **27 skills de proyecto: las 26 originales más `cohort-analysis`**, los **4 servidores MCP**, sus instaladores, versiones fijadas, pruebas, procedencia y mantenimiento revisable. No contiene credenciales, sesiones, historial de Git, los ZIP originales ni resultados de investigaciones anteriores. No incluye dependencias preinstaladas: el setup las descarga desde sus registros públicos.
+Este paquete ampliado contiene **30 skills de proyecto: las 26 originales y cuatro adicionales**, los **5 servidores MCP**, sus instaladores, versiones fijadas, pruebas, procedencia y mantenimiento revisable. Conserva las 27 skills y los cuatro servidores del paquete inicial; añade tres skills originales del proyecto y un MCP matemático local. No contiene credenciales, sesiones, historial de Git, los ZIP originales ni resultados de investigaciones anteriores. No incluye dependencias preinstaladas: el setup las descarga desde sus registros públicos.
 
 ## 1. La forma más sencilla: adjuntar este ZIP en la cuenta nueva
 
@@ -20,9 +20,9 @@ Extrae el ZIP en una carpeta nueva y entra en `hoplite-kit-portable/`. Revisa lo
 python3 scripts/exportar_kit.py verify --directory .
 ```
 
-`MANIFIESTO-PAQUETE.json` enumera todos los archivos salvo el propio manifiesto, con tamaño y SHA-256, las 27 skills y los 4 MCP. El verificador reconstruye también el manifiesto para comprobarlo. El archivo externo `hoplite-kit-portable.zip.sha256` cubre el ZIP completo y permite comprobar la descarga antes de extraerla, por ejemplo con `sha256sum -c hoplite-kit-portable.zip.sha256` en Linux. Los hashes detectan cambios; no son una firma independiente del editor.
+`MANIFIESTO-PAQUETE.json` enumera todos los archivos salvo el propio manifiesto, con tamaño y SHA-256, las 30 skills y los 5 MCP. El verificador reconstruye también el manifiesto para comprobarlo. El archivo externo `hoplite-kit-portable.zip.sha256` cubre el ZIP completo y permite comprobar la descarga antes de extraerla, por ejemplo con `sha256sum -c hoplite-kit-portable.zip.sha256` en Linux. Los hashes detectan cambios; no son una firma independiente del editor. El ZIP original de 27 skills es una revisión distinta: no se reutiliza su checksum para esta ampliación.
 
-Requisitos del setup: **Bash, Python 3.11–3.13, uv, Node.js ≥22.20 y npm**, conexión a Internet y acceso a los registros públicos. El setup del proyecto está orientado a Linux/macOS, incluido el sandbox Linux de Hoplite; no se ha verificado una instalación Windows nativa. Los entornos Python y Node se reconstruyen, nunca se copian desde la cuenta anterior.
+Requisitos del setup: **Bash, Python 3.11–3.13, uv, Node.js compatible con `^22.22.2 || ^24.15.0 || >=26.0.0` y npm**, conexión a Internet y acceso a los registros públicos. El mínimo de Node refleja el `jsdom` fijado; por ejemplo, Node 24.19.0 es compatible. El setup del proyecto está orientado a Linux/macOS, incluido el sandbox Linux de Hoplite; no se ha verificado una instalación Windows nativa. Los entornos Python y Node se reconstruyen, nunca se copian desde la cuenta anterior.
 
 Desde la raíz del proyecto instalado:
 
@@ -33,7 +33,9 @@ tools/hoplite-research/.venv/bin/python -m unittest discover -s tests -v
 tools/hoplite-research/.venv/bin/python tools/hoplite-research/scripts/research_client.py check --live
 ```
 
-El verificador debe informar **26 skills originales, 1 adicional y 4 MCP configurados**. La última orden hace una operación pública acotada con cada servidor; su resultado debe distinguir inicialización, catálogo y prueba funcional. Conserva los errores y límites del proveedor, sin cambiar identidades o endpoints para eludirlos. Los reportes de esta ejecución se generan en la cuenta destino; no se reutiliza como prueba una comprobación de la cuenta de origen.
+El verificador debe informar **26 skills originales, 4 adicionales y 5 MCP configurados**. La última orden hace una operación pública acotada con cada servidor externo y cuatro operaciones sintéticas con el MCP matemático local; su resultado debe distinguir inicialización, catálogo y prueba funcional. Conserva los errores y límites del proveedor, sin cambiar identidades o endpoints para eludirlos. Los reportes de esta ejecución se generan en la cuenta destino; no se reutiliza como prueba una comprobación de la cuenta de origen.
+
+Para comprobar solo el MCP nuevo sin consultar APIs externas, usa `tools/hoplite-research/.venv/bin/python tools/hoplite-research/scripts/research_client.py check --server business-math`. No necesita `--live` para verificar sus cuatro cálculos locales.
 
 El setup efectivo de Hoplite debe ser `bash .hoplite/setup.sh`. Revisa Settings si hay un override previo, pues tiene prioridad sobre `.hoplite/settings.json`. Si el repositorio ya contiene otros archivos, skills, MCP o instrucciones, detén las colisiones y prepara una integración revisada: este kit está verificado como proyecto independiente, no como un reemplazo indiscriminado de otra configuración.
 
@@ -52,8 +54,11 @@ El setup efectivo de Hoplite debe ser `bash .hoplite/setup.sh`. Revisa Settings 
 | `research-team` | `scholarly-metadata` | `seo-audit` |
 | `source-fact-checking` | `tool-due-diligence` | `trend-analysis` |
 | `unit-economics` | `web-search-strategy` | `cohort-analysis` *(adicional)* |
+| `market-sizing` *(adicional)* | `business-acquisition-due-diligence` *(adicional)* | `public-procurement-screening` *(adicional)* |
 
-Se conserva el `SKILL.md` íntegro de cada raíz, incluidas sus atribuciones y licencias. Los ZIP originales solo aportaban raíces autónomas, no bibliotecas completas de scripts o referencias de terceros. No se atribuye una licencia general a todo el paquete. Las skills nativas que proporciona Hoplite no son parte de esta exportación ni se copian desde una cuenta.
+Se conserva el `SKILL.md` íntegro de cada raíz original, incluidas sus atribuciones y licencias. Los ZIP originales solo aportaban raíces autónomas, no bibliotecas completas de scripts o referencias de terceros. Las tres skills nuevas son instrucciones originales del proyecto, con procedencia y hashes registrados; no copian plugins ni scripts externos. No se atribuye una licencia general a todo el paquete. Las skills nativas que proporciona Hoplite no son parte de esta exportación ni se copian desde una cuenta.
+
+La [guía de investigación comercial](docs/business-research-guide.md) combina estas capacidades para comparar oportunidades legales con evidencia y presupuesto acotado. Una skill no entrena de nuevo al modelo, acredita pericia ni garantiza ingresos.
 
 ### MCP
 
@@ -63,6 +68,7 @@ Se conserva el `SKILL.md` íntegro de cada raíz, incluidas sus atribuciones y l
 | `research-arxiv` | stdio | Lanzador local, dependencias fijadas y almacenamiento local aislado. |
 | `research-context7` | HTTP | Configuración para `https://mcp.context7.com/mcp`. |
 | `research-firecrawl` | HTTP | Configuración para `https://mcp.firecrawl.dev/v2/mcp`. |
+| `research-business-math` | stdio | Cálculos locales de economía mensual, retención ponderada, mercado y puente de caja; reutiliza el runtime fijado, sin nuevas dependencias ni APIs externas. |
 
 La configuración actual no incluye claves. Los endpoints remotos, cuotas y condiciones dependen de sus proveedores y pueden cambiar. Si un proveedor exige credenciales, autorízalas en la configuración segura de **la cuenta destino**, no en archivos del kit ni en el chat. No existe en este paquete una instalación MCP universal para todos los proyectos de una cuenta.
 
@@ -70,7 +76,7 @@ Firecrawl se limita a **Search/Scrape de información pública**: sin Parse, upl
 
 ## 4. Opcional: biblioteca personal de la cuenta nueva
 
-Las 27 skills del proyecto ya estarán disponibles en ese proyecto. Para utilizarlas como **skills personales** en otros proyectos iniciados por el mismo usuario, hace falta una importación autenticada independiente.
+Las 30 skills del proyecto ya estarán disponibles en ese proyecto. Para utilizarlas como **skills personales** en otros proyectos iniciados por el mismo usuario, hace falta una importación autenticada independiente.
 
 Haz este paso en **tu terminal privada**, con el paquete extraído y las dependencias de `tools/personal-skills` instaladas. Comprueba que la autenticación corresponde a la cuenta de destino antes de autorizar cualquier importación. Si ya existe una sesión de otra cuenta, no continúes con ella.
 
@@ -81,11 +87,11 @@ node tools/personal-skills/instalar.mjs comprobar
 node tools/personal-skills/instalar.mjs importar
 ```
 
-`preparar` copia las 27 raíces a `~/.agents/skills` sin reemplazar versiones distintas. `comprobar` verifica el catálogo **local**, no el remoto. `importar` invoca el CLI oficial fijado en el lockfile y selecciona solo esos 27 nombres. El CLI necesita la autenticación y confirmación de la cuenta de destino; sigue su flujo oficial en tu equipo. No pegues claves, tokens, códigos de login ni capturas que los contengan en Hoplite, GitHub o este paquete.
+`preparar` copia las 30 raíces a `~/.agents/skills` sin reemplazar versiones distintas. `comprobar` verifica el catálogo **local**, no el remoto. `importar` invoca el CLI oficial fijado en el lockfile y selecciona solo esos 30 nombres. El CLI necesita la autenticación y confirmación de la cuenta de destino; sigue su flujo oficial en tu equipo. No pegues claves, tokens, códigos de login ni capturas que los contengan en Hoplite, GitHub o este paquete.
 
-No ejecutes `onboard` para esta tarea: puede importar historial ajeno al kit. No uses `--all` ni `--replace` para resolver colisiones sin revisión. Cancelar la confirmación o encontrar nombres ya existentes no significa haber importado 27 skills nuevas.
+No ejecutes `onboard` para esta tarea: puede importar historial ajeno al kit. No uses `--all` ni `--replace` para resolver colisiones sin revisión. Cancelar la confirmación o encontrar nombres ya existentes no significa haber importado 30 skills nuevas.
 
-La aceptación final se hace abriendo, como ese usuario, un hilo en **otro proyecto que no contenga copias en `.agents/skills`** y comprobando las 27 skills. Las skills personales no se aplican a automations; una raíz del repositorio con el mismo nombre tiene prioridad. Sin esa prueba, el estado correcto es «importación personal pendiente de verificar», no «instalado en toda la cuenta».
+La aceptación final se hace abriendo, como ese usuario, un hilo en **otro proyecto que no contenga copias en `.agents/skills`** y comprobando las 30 skills. Las skills personales no se aplican a automations; una raíz del repositorio con el mismo nombre tiene prioridad. Sin esa prueba, el estado correcto es «importación personal pendiente de verificar», no «instalado en toda la cuenta».
 
 ## 5. Actualizaciones en la cuenta nueva
 
@@ -96,10 +102,10 @@ Los MCP HTTP siguen siendo servicios remotos. Las skills personales son una copi
 ## Criterios de entrega en la cuenta destino
 
 - [ ] El ZIP y todos los archivos inventariados pasan la verificación de integridad.
-- [ ] Las 27 raíces y los 4 MCP están guardados en el repositorio de destino.
+- [ ] Las 30 raíces y los 5 MCP están guardados en el repositorio de destino.
 - [ ] Setup y pruebas offline pasan en una instalación limpia.
-- [ ] Cada MCP inicializa, anuncia su catálogo esperado y supera una operación pública real; cualquier fallo queda registrado.
-- [ ] Un hilo nuevo desde la revisión publicada descubre las 27 skills y los 4 MCP nativamente.
+- [ ] Cada MCP inicializa, anuncia su catálogo esperado y supera su prueba funcional pública o sintética local; cualquier fallo queda registrado.
+- [ ] Un hilo nuevo desde la revisión publicada descubre las 30 skills y los 5 MCP nativamente.
 - [ ] Si se pidió biblioteca personal, la importación autorizada se comprueba en otro proyecto sin copias locales.
 - [ ] Si se pidió mantenimiento, su activación se comprueba en Actions del repositorio nuevo.
 

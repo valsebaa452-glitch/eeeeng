@@ -24,11 +24,14 @@ STATIC_FILES = (
     "docs/provenance/attachment-integrity.json",
     "docs/provenance/action-pins.json", "docs/provenance/upload-artifact-pin.json",
     "scripts/verify_toolkit.py", "scripts/check_upstreams.py", "scripts/business_math.py",
-    "scripts/exportar_kit.py", "examples/business-scenarios.json", "examples/cohorts.json",
+    "scripts/research_math.py", "scripts/exportar_kit.py",
+    "examples/business-scenarios.json", "examples/cohorts.json",
+    "examples/research-math.json", "examples/research-evaluation.json", "docs/business-research-guide.md",
     "tests/test_research_runtime.py", "tests/test_mcp_regressions.py",
     "tests/test_upstream_monitor.py", "tests/test_business_math.py",
     "tests/test_verification.py", "tests/test_personal_installer.py",
     "tests/test_readability.py", "tests/test_portable_bundle.py",
+    "tests/test_research_math.py", "tests/test_business_math_mcp.py",
     "tools/personal-skills/package.json", "tools/personal-skills/package-lock.json",
     "tools/personal-skills/.npmrc", "tools/personal-skills/instalar.mjs",
     "tools/hoplite-research/pyproject.toml", "tools/hoplite-research/uv.lock",
@@ -40,6 +43,8 @@ STATIC_FILES = (
     "tools/hoplite-research/scripts/research_mcp.py",
     "tools/hoplite-research/scripts/prepare_readability.py",
     "tools/hoplite-research/scripts/research_client.py",
+    "tools/hoplite-research/scripts/business_math_mcp.py",
+    "tools/hoplite-research/scripts/run_business_math_mcp.py",
 )
 EXPECTED_SERVERS = [
     {"name": f"research-{name}", "enabled": True, "config": {
@@ -53,7 +58,12 @@ EXPECTED_SERVERS = [
         ("context7", "https://mcp.context7.com/mcp"),
         ("firecrawl", "https://mcp.firecrawl.dev/v2/mcp"),
     )
-]
+] + [{
+    "name": "research-business-math", "enabled": True, "config": {
+        "transport": "stdio", "command": "python3",
+        "args": ["tools/hoplite-research/scripts/run_business_math_mcp.py"],
+    },
+}]
 
 
 def digest(data):
@@ -83,9 +93,9 @@ def payload(root=ROOT):
         name = f".agents/skills/{entry['path']}"
         files[name] = read_source(root, name)
     result = verify(root)
-    if result != {"skills_verified": 27, "imported_skills_verified": 26,
-                  "additional_skills_verified": 1, "mcp_configured": 4}:
-        raise ValueError("Expected all 27 skills and exactly four MCP servers")
+    if result != {"skills_verified": 30, "imported_skills_verified": 26,
+                  "additional_skills_verified": 4, "mcp_configured": 5}:
+        raise ValueError("Expected all 30 skills and exactly five MCP servers")
     settings = json.loads(files[".hoplite/settings.json"])
     expected = {
         "version": 1,
@@ -101,7 +111,7 @@ def payload(root=ROOT):
         "scope": "project-kit; personal-library import requires separate destination authorization",
         "skills": sorted(entry["name"] for entry in entries),
         "original_skill_count": 26,
-        "additional_skills": ["cohort-analysis"],
+        "additional_skills": [entry["name"] for entry in additional["skills"]],
         "mcp_servers": [{"name": server["name"], "transport": server["config"]["transport"]}
                         for server in EXPECTED_SERVERS],
         "files": {name: {"sha256": digest(data), "bytes": len(data)}
@@ -156,7 +166,9 @@ def verify_directory(root):
     for name in ("README.md", MANIFEST):
         if read_source(root, name) != files[name]:
             raise ValueError(f"Portable file inventory does not match: {name}")
-    return {"files_verified": len(files), "skills_verified": 27, "mcp_configured": 4,
+    inventory = json.loads(files[MANIFEST])
+    return {"files_verified": len(files), "skills_verified": len(inventory["skills"]),
+            "mcp_configured": len(inventory["mcp_servers"]),
             "personal_library_imported": False, "live_mcp_checked": False}
 
 

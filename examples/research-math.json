@@ -1,0 +1,25 @@
+{
+  "scope": "Synthetic arithmetic fixtures, not market evidence, a valuation or an earnings forecast.",
+  "market": {
+    "currency": "USD",
+    "period_months": 12,
+    "buyers": 1000,
+    "serviceable_buyers": 200,
+    "reachable_buyers": 100,
+    "win_rate": 0.2,
+    "customer_capacity": 10,
+    "spend_per_buyer": 1200
+  },
+  "cash_bridge": {
+    "currency": "USD",
+    "period_months": 12,
+    "reported_ebitda": 120000,
+    "nonrecurring_income": 20000,
+    "verified_oneoff_expenses": 5000,
+    "owner_salary_adjustment": 30000,
+    "maintenance_capex": 10000,
+    "working_capital_change": 15000,
+    "debt_service": 20000,
+    "cash_taxes": 10000
+  }
+}

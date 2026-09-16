@@ -40,6 +40,15 @@
         "transport": "http",
         "url": "https://mcp.firecrawl.dev/v2/mcp"
       }
+    },
+    {
+      "name": "research-business-math",
+      "enabled": true,
+      "config": {
+        "transport": "stdio",
+        "command": "python3",
+        "args": ["tools/hoplite-research/scripts/run_business_math_mcp.py"]
+      }
     }
   ]
 }

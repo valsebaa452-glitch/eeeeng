@@ -95,6 +95,41 @@ def error_summary(error):
     return f"{type(error).__name__}: {error}"
 
 
+async def check_business_math(session):
+    examples = json.loads((PROJECT_ROOT / "examples/research-math.json").read_text())
+    cases = [
+        ("monthly_economics", {"scenario": {
+            "name": "Synthetic smoke test", "clients": 10, "new_clients": 2, "price": 100,
+            "refund_rate": 0.05, "payment_fee_rate": 0.03, "technology_per_client": 10,
+            "delivery_hours_per_client": 1, "hourly_labor_cost": 20,
+            "onboarding_hours_per_new_client": 2, "sales_hours": 3, "admin_hours": 2,
+            "fixed_costs": 50,
+        }}, {"gross_revenue": 1000, "operating_result_before_tax": 390,
+             "human_hours": 19, "conditional_break_even_clients": 4}),
+        ("cohort_retention", {"rows": [
+            {"cohort": "Synthetic A", "period": 1, "eligible": 10, "retained": 8},
+            {"cohort": "Synthetic B", "period": 1, "eligible": 5, "retained": 1},
+            {"cohort": "Unobserved", "period": 2, "eligible": 5, "retained": None},
+        ]}, {"periods": [
+            {"period": 1, "eligible_observed": 15, "retained": 9, "retention": 0.6},
+            {"period": 2, "eligible_observed": 0, "retained": 0, "retention": None},
+        ]}),
+        ("market_size", {"scenario": examples["market"]}, {
+            "tam": "1200000.00", "sam": "240000.00", "som_scenario": "12000.00",
+            "scenario_customers": 10, "not_a_forecast": True,
+        }),
+        ("acquisition_cash_bridge", {"scenario": examples["cash_bridge"]}, {
+            "normalized_ebitda": "75000.00", "cash_after_listed_costs": "20000.00",
+            "not_a_forecast": True,
+        }),
+    ]
+    for name, arguments, expected in cases:
+        result = json.loads(checked_text(await session.call_tool(name, arguments)))
+        if not isinstance(result, dict) or any(result.get(key) != value for key, value in expected.items()):
+            raise RuntimeError(f"The local {name} calculation did not match the synthetic fixture")
+    return [name for name, _, _ in cases]
+
+
 async def check(live, selected=None):
     if selected and set(selected) - SERVERS.keys():
         raise ValueError("Unknown MCP selection")
@@ -129,7 +164,7 @@ async def check(live, selected=None):
                         evidence["private_url_rejected"] = True
                     elif name == "arxiv":
                         checked_text(await session.call_tool("list_papers", {}))
-                    if live:
+                    if live or name == "business-math":
                         evidence["functional_status"] = "failed"
                         if name == "fetch":
                             text = checked_text(await session.call_tool(
@@ -161,6 +196,9 @@ async def check(live, selected=None):
                             if "Example Domain" not in text or "documentation examples" not in text:
                                 raise RuntimeError("Firecrawl did not return the expected public page body")
                             evidence["live_assertion"] = "Firecrawl keyless returned example.com content; it may be cached"
+                        elif name == "business-math":
+                            evidence["functional_operations"] = await check_business_math(session)
+                            evidence["live_assertion"] = "Four local arithmetic tools matched synthetic fixtures; no external API calls"
                         else:
                             raise RuntimeError("No live assertion is defined for this server")
                         evidence["functional_status"] = "passed"

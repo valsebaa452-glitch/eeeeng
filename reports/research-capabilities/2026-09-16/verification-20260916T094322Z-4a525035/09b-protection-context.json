@@ -1,0 +1,9 @@
+{
+  "strict_guard_result": "09-post-setup-protection.json remains unchanged with exit code 1",
+  "changed_report": "reports/research-capabilities/2026-09-16/sources.md",
+  "report_modified_at": "2026-09-16T09:43:37.194258+00:00",
+  "first_setup_started_at": "2026-09-16T09:44:32.202090+00:00",
+  "report_change_precedes_setup": true,
+  "report_in_export": false,
+  "disposition": "Documentary drift outside the export, retained for parent review; no report was restored or rewritten"
+}

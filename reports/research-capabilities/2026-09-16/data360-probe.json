@@ -1,0 +1,54 @@
+{
+  "checked_on": "2026-09-16",
+  "endpoint": "https://maimcpext.worldbank.org/ext/data360/mcp",
+  "decision": "not_configured_due_to_failed_functional_probe",
+  "sdk_version": "1.30.0",
+  "server_version_observed": "0.1.0",
+  "protocol_version": "2025-11-25",
+  "first_attempt": {
+    "started_at_utc": "2026-09-16T09:13:33.456478+00:00",
+    "initialize_succeeded": true,
+    "catalog_received": false,
+    "lookup_attempted": false,
+    "failure": "The local request guard rejected a response cookie before subsequent requests. This was not a provider authentication rejection.",
+    "rpc_counts": {
+      "initialize": 1,
+      "notifications/initialized": 0,
+      "tools/list": 0,
+      "tools/call": 0
+    }
+  },
+  "final_attempt": {
+    "observed_at_utc": "2026-09-16T09:19:36.066283+00:00",
+    "local_correction": "Discard Cookie before the existing guard; retain MCP-Session-Id. Offline test passed for discarding cookies and rejecting credentials.",
+    "initialize_succeeded": true,
+    "tool_count": 15,
+    "catalog_paginated": false,
+    "lookup": {
+      "tool": "data360_find_codelist_value",
+      "arguments": {"codelist_type": "REF_AREA", "query": "Kenya", "limit": 1},
+      "mcp_http_status": 200,
+      "isError": true,
+      "upstream_http_status": 404,
+      "upstream_url_reported_in_error": "https://data360api.worldbank.org/data360/codelist?type=REF_AREA",
+      "upstream_url_requested_directly": false,
+      "expected_kenya_code_verified": false
+    },
+    "rpc_counts": {
+      "initialize": 1,
+      "notifications/initialized": 1,
+      "tools/list": 1,
+      "tools/call": 1
+    },
+    "elapsed_seconds": 25.227
+  },
+  "total_mcp_post_requests": 5,
+  "total_lookup_calls": 1,
+  "lookup_retries": 0,
+  "limits": [
+    "No credentials, private inputs, package installations, charts, dataset downloads or native configuration changes were used for this candidate.",
+    "No further retry or alternate endpoint was attempted after the functional failure.",
+    "Initialization without credentials does not establish all-tool authorization, quota, pricing or billing.",
+    "The original detailed artifacts remain local; this report omits cookies, session IDs, headers and remote instructions."
+  ]
+}

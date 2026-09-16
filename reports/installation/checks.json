@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "scope": "Project installation checks; native verification by the parent is documented separately in docs/installation-verification.md.",
+  "environment": {
+    "python": "3.12.3",
+    "node": "24.19.0",
+    "npm": "11.17.0",
+    "uv": "0.9.28"
+  },
+  "checks": [
+    {
+      "step": "01-setup",
+      "command": "bash .hoplite/setup.sh",
+      "started_at": "2026-09-16T06:37:32Z",
+      "finished_at": "2026-09-16T06:37:37Z",
+      "exit_code": 0
+    },
+    {
+      "step": "02-verify-toolkit",
+      "command": "python3 scripts/verify_toolkit.py",
+      "started_at": "2026-09-16T06:37:52Z",
+      "finished_at": "2026-09-16T06:37:52Z",
+      "exit_code": 0
+    },
+    {
+      "step": "03-unittest",
+      "command": "tools/hoplite-research/.venv/bin/python -m unittest discover -s tests -v",
+      "started_at": "2026-09-16T06:37:59Z",
+      "finished_at": "2026-09-16T06:38:01Z",
+      "exit_code": 0
+    },
+    {
+      "step": "04-setup-idempotence",
+      "command": "bash .hoplite/setup.sh",
+      "started_at": "2026-09-16T06:38:10Z",
+      "finished_at": "2026-09-16T06:38:14Z",
+      "exit_code": 0
+    },
+    {
+      "step": "05-mcp-live",
+      "command": "tools/hoplite-research/.venv/bin/python tools/hoplite-research/scripts/research_client.py check --live",
+      "started_at": "2026-09-16T06:38:20Z",
+      "finished_at": "2026-09-16T06:38:28Z",
+      "exit_code": 0
+    },
+    {
+      "step": "06-export-integrity",
+      "command": "python3 scripts/exportar_kit.py verify --directory .",
+      "started_at": "2026-09-16T06:38:36Z",
+      "finished_at": "2026-09-16T06:38:37Z",
+      "exit_code": 0
+    }
+  ],
+  "all_exit_codes_zero": true,
+  "counts": {
+    "commands_executed": 6,
+    "setup_runs": 2,
+    "skills_verified": 27,
+    "imported_project_skills_verified": 26,
+    "additional_project_skills_verified": 1,
+    "mcp_configured": 4,
+    "mcp_client_functional_passed": 4,
+    "mcp_client_live_runs": 1,
+    "tests_passed": 70,
+    "files_verified": 72
+  },
+  "unittest": {
+    "tests": 70,
+    "duration_seconds": 1.308,
+    "result": "OK"
+  },
+  "mcp_client": {
+    "checked_at": "2026-09-16T06:38:21.207433+00:00",
+    "passed": true,
+    "scope": "Requested project-transport smoke tests, not every tool or account-wide availability; catalog success does not establish functional or native availability",
+    "report": "reports/installation/mcp-client.json"
+  },
+  "personal_library_imported": false,
+  "local_catalog_verification": {
+    "scope": "Real preparar/comprobar installer with a new temporary HOME; LOCAL catalog only, not the remote personal library.",
+    "passed": true,
+    "cwd": "repository root",
+    "temporary_home": ".hoplite/artifacts/installation-verification/local-catalog-b0d5kd8n/home",
+    "environment_keys": ["DISABLE_TELEMETRY", "HOME", "LANG", "PATH"],
+    "disable_telemetry": true,
+    "catalog_cli": "skills@1.5.26 list --global --json (invoked by comprobar)",
+    "checks": [
+      {
+        "command": "node tools/personal-skills/instalar.mjs preparar",
+        "started_at": "2026-09-16T06:48:53.875878+00:00",
+        "finished_at": "2026-09-16T06:48:53.992414+00:00",
+        "exit_code": 0,
+        "assertion": "PREPARADO: 27/27 skills locales verificadas; 27 new files in the isolated HOME."
+      },
+      {
+        "command": "node tools/personal-skills/instalar.mjs comprobar",
+        "started_at": "2026-09-16T06:48:53.993439+00:00",
+        "finished_at": "2026-09-16T06:48:54.209026+00:00",
+        "exit_code": 0,
+        "assertion": "VERIFICADO: 27/27 skills presentes en el catálogo LOCAL y con hashes correctos."
+      }
+    ],
+    "skills_expected": 27,
+    "local_skills_verified": 27,
+    "authentication_attempted": false,
+    "personal_library_imported": false,
+    "remote_library_verified": false,
+    "network_boundary": "Reviewed local-only list code path with DISABLE_TELEMETRY=1; no network isolation or packet capture was used.",
+    "log_directory": ".hoplite/artifacts/installation-verification/local-catalog-b0d5kd8n"
+  },
+  "limitations": [
+    "Native MCP discovery in a new thread was not checked.",
+    "The personal skill library was not imported or inspected.",
+    "The live check was run once; it is a smoke test, not a test of every advertised tool.",
+    "Firecrawl may have served cached example.com content.",
+    "exportar_kit verify is offline; its live_mcp_checked=false does not negate the separately saved live result."
+  ],
+  "warnings": [
+    "npm warned about the unknown store-dir environment configuration in both setup runs; no configuration was changed.",
+    "The initial log-directory capture error was recovered without rerunning the initial setup; see 00-log-capture-warning.log."
+  ]
+}

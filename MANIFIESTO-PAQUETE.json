@@ -1,0 +1,341 @@
+{
+  "schema_version": 1,
+  "scope": "project-kit; personal-library import requires separate destination authorization",
+  "skills": [
+    "ab-test-setup",
+    "ai-opportunity-validation",
+    "ai-service-evaluation",
+    "analytics-tracking",
+    "cohort-analysis",
+    "competitive-intelligence",
+    "competitor-alternatives",
+    "copywriting",
+    "customer-discovery",
+    "deep-web-research",
+    "distribution-validation",
+    "free-tool-strategy",
+    "launch-strategy",
+    "lead-research-assistant",
+    "market-customer-research",
+    "page-cro",
+    "pricing-strategy",
+    "product-manager-toolkit",
+    "public-data-analysis",
+    "research-team",
+    "scholarly-metadata",
+    "seo-audit",
+    "source-fact-checking",
+    "tool-due-diligence",
+    "trend-analysis",
+    "unit-economics",
+    "web-search-strategy"
+  ],
+  "original_skill_count": 26,
+  "additional_skills": [
+    "cohort-analysis"
+  ],
+  "mcp_servers": [
+    {
+      "name": "research-fetch",
+      "transport": "stdio"
+    },
+    {
+      "name": "research-arxiv",
+      "transport": "stdio"
+    },
+    {
+      "name": "research-context7",
+      "transport": "http"
+    },
+    {
+      "name": "research-firecrawl",
+      "transport": "http"
+    }
+  ],
+  "files": {
+    ".agents/skills/ab-test-setup/SKILL.md": {
+      "sha256": "2c8426cf24debfe84c7242680e5f59945b0507808e6a062b478c7f73a21a43c8",
+      "bytes": 6172
+    },
+    ".agents/skills/ai-opportunity-validation/SKILL.md": {
+      "sha256": "89b08ac0209b7f9e8cd66c80d7260bdd96e7fa25bb73cc0a6dd41f2e50f6d443",
+      "bytes": 4062
+    },
+    ".agents/skills/ai-service-evaluation/SKILL.md": {
+      "sha256": "46406705ca3fd3e3baf99933314d17b818372b192a0f5a4ef7ce0a9f083291ae",
+      "bytes": 2901
+    },
+    ".agents/skills/analytics-tracking/SKILL.md": {
+      "sha256": "02bb5a9de086b69157f582e9a002d08778914d0aab88518a4620ec9358541d36",
+      "bytes": 5986
+    },
+    ".agents/skills/cohort-analysis/SKILL.md": {
+      "sha256": "db4ea78b492610d8c95f793b4bc533cd24da481648e59824fa82aae6d5821d7f",
+      "bytes": 4332
+    },
+    ".agents/skills/competitive-intelligence/SKILL.md": {
+      "sha256": "3b2e0655cb82711f4b7915240c357b8c44c6415d2b7385dcfc164cbaa79d9625",
+      "bytes": 3231
+    },
+    ".agents/skills/competitor-alternatives/SKILL.md": {
+      "sha256": "1ecc8e26a359df8de4e17d45500446e494597190d71637636b9c04735518db18",
+      "bytes": 6105
+    },
+    ".agents/skills/copywriting/SKILL.md": {
+      "sha256": "8cc4247fdd808a467992355ee49b647abc876172ee5401cc47918e9ff11b0370",
+      "bytes": 5801
+    },
+    ".agents/skills/customer-discovery/SKILL.md": {
+      "sha256": "a348c3e0f2efbade550cd4f52762c0046cbd060468f377bcd7e49026ea7e437f",
+      "bytes": 2222
+    },
+    ".agents/skills/deep-web-research/SKILL.md": {
+      "sha256": "8d4ba4494cf4b0f459c3da4018c043ffb8907cb14db68d146e1ebe06937bd44c",
+      "bytes": 4526
+    },
+    ".agents/skills/distribution-validation/SKILL.md": {
+      "sha256": "f6112eee43b24f317f7de9b8f22f1afd62ff7ee64684da18aae2ba2e6686f734",
+      "bytes": 2017
+    },
+    ".agents/skills/free-tool-strategy/SKILL.md": {
+      "sha256": "f3dc1539e65b8cd80b28c74c34baecd4fb99dc729b63c9f73a6878043ed5b093",
+      "bytes": 6157
+    },
+    ".agents/skills/launch-strategy/SKILL.md": {
+      "sha256": "7fba53752a1a060f349b23e3e21a2e39fbe40b3c8741e6880d22f99512eb909b",
+      "bytes": 6083
+    },
+    ".agents/skills/lead-research-assistant/SKILL.md": {
+      "sha256": "f33178ea59a26a6c0401cf615550a8b4f4e49dad9792db1769da35ee17f4c3b5",
+      "bytes": 4809
+    },
+    ".agents/skills/market-customer-research/SKILL.md": {
+      "sha256": "271effe90edd7ff22493782e0b08637aa7db2b71d94db2348654cbf23ed13d82",
+      "bytes": 3432
+    },
+    ".agents/skills/page-cro/SKILL.md": {
+      "sha256": "a77c31525dc0d39cd71cf6ba43309da4608d2782b684815e3fee7bee2820ba07",
+      "bytes": 5903
+    },
+    ".agents/skills/pricing-strategy/SKILL.md": {
+      "sha256": "0606810ac098c53e258811936297f8f3b6415c8808670ed17d6a89c709bcc9e8",
+      "bytes": 6435
+    },
+    ".agents/skills/product-manager-toolkit/SKILL.md": {
+      "sha256": "00908d49be45aaaa7d22eb9298fcad2aa543686905552c4bf42496cb9d1d5982",
+      "bytes": 4486
+    },
+    ".agents/skills/public-data-analysis/SKILL.md": {
+      "sha256": "711992f7511b4719d5b1740cffa954505f6732317760af8f9b1d577d707ebc91",
+      "bytes": 2760
+    },
+    ".agents/skills/research-team/SKILL.md": {
+      "sha256": "217908c6c5d6a7340c2a2f5d0b5b54121cc007ce4c77df0990bcdf7277ecc012",
+      "bytes": 3315
+    },
+    ".agents/skills/scholarly-metadata/SKILL.md": {
+      "sha256": "486fa865259e04e867de05186465814ac3f49cd838a349026f96a6c2218b3fcb",
+      "bytes": 3151
+    },
+    ".agents/skills/seo-audit/SKILL.md": {
+      "sha256": "2c3076c4dd33fae07b5512116cce6d3909eb4975911e89eb1c89ca548f44685a",
+      "bytes": 6091
+    },
+    ".agents/skills/source-fact-checking/SKILL.md": {
+      "sha256": "d38cf39ff5bec2f3a6158502b8e4106ec11a5b4c5b7b69fbc4ed43381a0ea993",
+      "bytes": 3692
+    },
+    ".agents/skills/tool-due-diligence/SKILL.md": {
+      "sha256": "5cc41182ee835fb1fb24e4d04d3b3a5c49f57babbb42099216e1a9c242a3a7cd",
+      "bytes": 2458
+    },
+    ".agents/skills/trend-analysis/SKILL.md": {
+      "sha256": "7387ad2d904ba140c5062d854a322af2ce0c64b806f8694b8711d9d2936a2b0b",
+      "bytes": 3369
+    },
+    ".agents/skills/unit-economics/SKILL.md": {
+      "sha256": "bec8e0fe40cb197e2f7a4124e2b7d99fcbf6fbdd35720ee86c85d824b97fdb89",
+      "bytes": 2570
+    },
+    ".agents/skills/web-search-strategy/SKILL.md": {
+      "sha256": "4eaf4db817de9b6587067d9230f597b121bec1e2789c5b2affd131fdc123c1a5",
+      "bytes": 3521
+    },
+    ".github/dependabot.yml": {
+      "sha256": "64af8c963f30fcf251a6eddfeefac50966269858e2767c6c97a0b957745d695e",
+      "bytes": 568
+    },
+    ".github/workflows/maintenance.yml": {
+      "sha256": "9c0d6c253b8555445b383562cf72b1c7db33bad402a91a265ff45338486891de",
+      "bytes": 3640
+    },
+    ".github/workflows/verify.yml": {
+      "sha256": "57e9da2481db5bd655360ac00014180a5b91dd04199a9ac1d213578baca5060d",
+      "bytes": 1475
+    },
+    ".gitignore": {
+      "sha256": "3a2a5e1e162f681c9be66cb3346cad8739f0cd5cb104d5a3c365e1dc9bbe75da",
+      "bytes": 171
+    },
+    ".hoplite/settings.json": {
+      "sha256": "bf044d7a78f43f12f622f92de3e460e53aad2dd82b51e2eb8e63bc085a12213a",
+      "bytes": 946
+    },
+    ".hoplite/setup.sh": {
+      "sha256": "d1bde3cdc1ab3e1558351105a2434ac1cf683e1f14a2afae5b9e071075dadef5",
+      "bytes": 387
+    },
+    "AGENTS.md": {
+      "sha256": "00a31c20ab24e1f952a5345ecf6af573f97c60ca63a880785f92edfd97c37d03",
+      "bytes": 1691
+    },
+    "LEEME-PRIMERO.md": {
+      "sha256": "e0f3361c1d8467b985070341b7fd34b9b882aa221cff833ba32e4a6d9e8717cd",
+      "bytes": 9973
+    },
+    "PROMPT-PARA-HOPLITE.txt": {
+      "sha256": "0200a09f7f2e6e44391f86d759a18d6e9688d0f426e5ba559cbbdee432300df0",
+      "bytes": 3562
+    },
+    "README.md": {
+      "sha256": "e0f3361c1d8467b985070341b7fd34b9b882aa221cff833ba32e4a6d9e8717cd",
+      "bytes": 9973
+    },
+    "docs/maintenance.md": {
+      "sha256": "0470cb781691d31b2f44fe242c4e5389d1d011a454221c2f7bf8d46d52748024",
+      "bytes": 6250
+    },
+    "docs/provenance/action-pins.json": {
+      "sha256": "e0271b97f83beb9a9f9405be9ef87f3eb723647721ba144de269db105e77e3a4",
+      "bytes": 6454
+    },
+    "docs/provenance/additional-skills.json": {
+      "sha256": "c3a3b6738625b178feec5bdaf8b85646e2fd6f2a357813d5aec4bf2bd8663d4e",
+      "bytes": 772
+    },
+    "docs/provenance/attachment-integrity.json": {
+      "sha256": "50146f4436401e780b99da772d8edb12b5752d7513c8e5b024848b16f8fa369d",
+      "bytes": 777
+    },
+    "docs/provenance/skills-export-manifest.json": {
+      "sha256": "1cdadfdf8d46dc75503bbb6c5e020fc3dbf188ae26fc0be13d281a2787386f92",
+      "bytes": 19902
+    },
+    "docs/provenance/upload-artifact-pin.json": {
+      "sha256": "5d68a3d8de86c71bf382b1ecefdc52a924ea8262eefcfb668c16ef457e691ddb",
+      "bytes": 725
+    },
+    "examples/business-scenarios.json": {
+      "sha256": "8262772ffbdf9f164b258cace0a8ae65049ba9fa3d8ea7022f5439c23d73441f",
+      "bytes": 1285
+    },
+    "examples/cohorts.json": {
+      "sha256": "fa7278a94a838fb36ee62383acbed6be3371b981f83695b785b4cdfd81484581",
+      "bytes": 346
+    },
+    "scripts/business_math.py": {
+      "sha256": "bacef0cd6e411d990288f57fc91dc6312413c928857e5ec507abaf3d11952a4d",
+      "bytes": 4895
+    },
+    "scripts/check_upstreams.py": {
+      "sha256": "c061c7bb95bb9a0b28b78200bc1a54e1ed12eca5376c1ec948a8c8c873c01639",
+      "bytes": 7134
+    },
+    "scripts/exportar_kit.py": {
+      "sha256": "29587099bbee89a5f3c2b28a463adda6af4bcb86268200c74657b12768483dff",
+      "bytes": 8122
+    },
+    "scripts/verify_toolkit.py": {
+      "sha256": "6140380a6843b534142f8a8580a59d516ac400f99ff66beec06eadb004d61892",
+      "bytes": 4002
+    },
+    "tests/test_business_math.py": {
+      "sha256": "893682eedcb906b10375cfde5c5d074715d11a91fe94f2257a7fd5ee8ac7c4ab",
+      "bytes": 2894
+    },
+    "tests/test_mcp_regressions.py": {
+      "sha256": "3cc78c134834a0229ad2840f8861f571e01682af2d23226bd763a2dc918374fd",
+      "bytes": 13341
+    },
+    "tests/test_personal_installer.py": {
+      "sha256": "53a7609b0195132597411e47e46050b9d6ffbe78deeb5406b3ac1040816138ea",
+      "bytes": 3267
+    },
+    "tests/test_portable_bundle.py": {
+      "sha256": "c0349852e752d9b082695699216045b1ac218fa2bc0a825bde587667a6fa20ee",
+      "bytes": 8460
+    },
+    "tests/test_readability.py": {
+      "sha256": "3bd0af6b2ef6eeed0defcfae55f82c9cdc83ad27097c707ca0f3258a4dbb9202",
+      "bytes": 1579
+    },
+    "tests/test_research_runtime.py": {
+      "sha256": "d9b5cf45c8ffb127e0ba7bd262e096281fb1d82dddac077f021c9f8dfd9f44eb",
+      "bytes": 5001
+    },
+    "tests/test_upstream_monitor.py": {
+      "sha256": "1cc3652ae4f0b0ffc410bab6f050f4df2d2a4d46698682d1bfad3f3666c7f23b",
+      "bytes": 2771
+    },
+    "tests/test_verification.py": {
+      "sha256": "0de66507a84ff436f1c83977b7bc29afd8dc34a3ed7244e5487ba3ac6b017d4a",
+      "bytes": 3124
+    },
+    "tools/hoplite-research/.hoplite/readability/package-lock.json": {
+      "sha256": "4797c3b64db0c2edece89e40576c08304637984be19ebbf237d20fd7287d35ed",
+      "bytes": 19358
+    },
+    "tools/hoplite-research/.hoplite/readability/package.json": {
+      "sha256": "4eae9a08d9f5e8a40d235e3216794ee4744c09db93a06dceeb2f6917076c9d2f",
+      "bytes": 278
+    },
+    "tools/hoplite-research/.hoplite/setup.sh": {
+      "sha256": "164be7d93084d893c3f2810510b42b0b84411260bcb36c5704e375f178b59bb5",
+      "bytes": 613
+    },
+    "tools/hoplite-research/pyproject.toml": {
+      "sha256": "d2c9d5822837980baddd2b68543ab6f259e3d581b951ed8bcb9e595a325e5c68",
+      "bytes": 308
+    },
+    "tools/hoplite-research/scripts/mcp_runtime.py": {
+      "sha256": "ba947d5b08788e6b70fb560fdbd1da20166378cdd650814b47f9fa8057fb541b",
+      "bytes": 6712
+    },
+    "tools/hoplite-research/scripts/prepare_readability.py": {
+      "sha256": "3c378c4ddd45bffce2c2a565c5a7d5ef81ce29a8ea05eb8a1e600d302f997daa",
+      "bytes": 2357
+    },
+    "tools/hoplite-research/scripts/research_client.py": {
+      "sha256": "6012e3a9b72c4cceba9f02a7268633924491c4d5a6d9f62f19b0d1b9d580f223",
+      "bytes": 11333
+    },
+    "tools/hoplite-research/scripts/research_mcp.py": {
+      "sha256": "59a644c7912066ffdb37084e37449c3239c35fd5c53277b6bcfe97ad58b0b5f0",
+      "bytes": 3449
+    },
+    "tools/hoplite-research/scripts/run_mcp.py": {
+      "sha256": "718a04f694a2b43d58e15683b2f6d29ed7113946339def38283158deb00378ea",
+      "bytes": 675
+    },
+    "tools/hoplite-research/uv.lock": {
+      "sha256": "c20576e65acf1906763a6b93616981f68425839e8f549a051127d5595c8dab99",
+      "bytes": 261365
+    },
+    "tools/personal-skills/.npmrc": {
+      "sha256": "f7a76d2a31d24623c2768cf5b296c479ba47221d6f7a15a7c5d775b60e25c6d4",
+      "bytes": 98
+    },
+    "tools/personal-skills/instalar.mjs": {
+      "sha256": "da844ac07e188987988239ac0e79e14a80087f790000360ce17fb1450d0ac14b",
+      "bytes": 8565
+    },
+    "tools/personal-skills/package-lock.json": {
+      "sha256": "a141dcac369a971f14216ca48326ac71d059981a5b0561be2c027333b54f16b3",
+      "bytes": 7069
+    },
+    "tools/personal-skills/package.json": {
+      "sha256": "8b1b743dd0df6a8109e0689afe9cffd27207bf54f97ef477895e401c83db3da5",
+      "bytes": 211
+    }
+  }
+}

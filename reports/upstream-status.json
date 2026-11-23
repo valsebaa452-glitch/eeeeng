@@ -1,0 +1,311 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-11-23T18:17:19.987817+00:00",
+  "activation": "Review only; no remote text is written into active skill roots",
+  "authentication": "none",
+  "local_skills_without_external_upstream": [
+    "ai-opportunity-validation",
+    "ai-service-evaluation",
+    "business-acquisition-due-diligence",
+    "customer-discovery",
+    "deep-web-research",
+    "distribution-validation",
+    "market-sizing",
+    "public-data-analysis",
+    "public-procurement-screening",
+    "research-team",
+    "scholarly-metadata",
+    "tool-due-diligence",
+    "unit-economics"
+  ],
+  "sources": [
+    {
+      "skills": [
+        "ab-test-setup"
+      ],
+      "repository": "coreyhaines31/marketingskills",
+      "path": "skills/ab-test-setup/SKILL.md",
+      "reviewed_commit": "3617bdc883230c2eec6cd77721987f71650902e5",
+      "reviewed_source_url": "https://raw.githubusercontent.com/coreyhaines31/marketingskills/3617bdc883230c2eec6cd77721987f71650902e5/skills/ab-test-setup/SKILL.md",
+      "status": "access_limited",
+      "error": "Public upstream access limited: HTTP 403; no retry"
+    },
+    {
+      "skills": [
+        "analytics-tracking"
+      ],
+      "repository": "coreyhaines31/marketingskills",
+      "path": "skills/analytics-tracking/SKILL.md",
+      "reviewed_commit": "3617bdc883230c2eec6cd77721987f71650902e5",
+      "reviewed_source_url": "https://raw.githubusercontent.com/coreyhaines31/marketingskills/3617bdc883230c2eec6cd77721987f71650902e5/skills/analytics-tracking/SKILL.md",
+      "status": "not_checked_due_to_limit",
+      "error": "Public upstream access limited: HTTP 403; no retry"
+    },
+    {
+      "skills": [
+        "competitor-alternatives"
+      ],
+      "repository": "coreyhaines31/marketingskills",
+      "path": "skills/competitor-alternatives/SKILL.md",
+      "reviewed_commit": "3617bdc883230c2eec6cd77721987f71650902e5",
+      "reviewed_source_url": "https://raw.githubusercontent.com/coreyhaines31/marketingskills/3617bdc883230c2eec6cd77721987f71650902e5/skills/competitor-alternatives/SKILL.md",
+      "status": "not_checked_due_to_limit",
+      "error": "Public upstream access limited: HTTP 403; no retry"
+    },
+    {
+      "skills": [
+        "copywriting"
+      ],
+      "repository": "coreyhaines31/marketingskills",
+      "path": "skills/copywriting/SKILL.md",
+      "reviewed_commit": "3617bdc883230c2eec6cd77721987f71650902e5",
+      "reviewed_source_url": "https://raw.githubusercontent.com/coreyhaines31/marketingskills/3617bdc883230c2eec6cd77721987f71650902e5/skills/copywriting/SKILL.md",
+      "status": "not_checked_due_to_limit",
+      "error": "Public upstream access limited: HTTP 403; no retry"
+    },
+    {
+      "skills": [
+        "free-tool-strategy"
+      ],
+      "repository": "coreyhaines31/marketingskills",
+      "path": "skills/free-tool-strategy/SKILL.md",
+      "reviewed_commit": "3617bdc883230c2eec6cd77721987f71650902e5",
+      "reviewed_source_url": "https://raw.githubusercontent.com/coreyhaines31/marketingskills/3617bdc883230c2eec6cd77721987f71650902e5/skills/free-tool-strategy/SKILL.md",
+      "status": "not_checked_due_to_limit",
+      "error": "Public upstream access limited: HTTP 403; no retry"
+    },
+    {
+      "skills": [
+        "launch-strategy"
+      ],
+      "repository": "coreyhaines31/marketingskills",
+      "path": "skills/launch-strategy/SKILL.md",
+      "reviewed_commit": "3617bdc883230c2eec6cd77721987f71650902e5",
+      "reviewed_source_url": "https://raw.githubusercontent.com/coreyhaines31/marketingskills/3617bdc883230c2eec6cd77721987f71650902e5/skills/launch-strategy/SKILL.md",
+      "status": "not_checked_due_to_limit",
+      "error": "Public upstream access limited: HTTP 403; no retry"
+    },
+    {
+      "skills": [
+        "page-cro"
+      ],
+      "repository": "coreyhaines31/marketingskills",
+      "path": "skills/page-cro/SKILL.md",
+      "reviewed_commit": "3617bdc883230c2eec6cd77721987f71650902e5",
+      "reviewed_source_url": "https://raw.githubusercontent.com/coreyhaines31/marketingskills/3617bdc883230c2eec6cd77721987f71650902e5/skills/page-cro/SKILL.md",
+      "status": "not_checked_due_to_limit",
+      "error": "Public upstream access limited: HTTP 403; no retry"
+    },
+    {
+      "skills": [
+        "pricing-strategy"
+      ],
+      "repository": "coreyhaines31/marketingskills",
+      "path": "skills/pricing-strategy/SKILL.md",
+      "reviewed_commit": "3617bdc883230c2eec6cd77721987f71650902e5",
+      "reviewed_source_url": "https://raw.githubusercontent.com/coreyhaines31/marketingskills/3617bdc883230c2eec6cd77721987f71650902e5/skills/pricing-strategy/SKILL.md",
+      "status": "not_checked_due_to_limit",
+      "error": "Public upstream access limited: HTTP 403; no retry"
+    },
+    {
+      "skills": [
+        "seo-audit"
+      ],
+      "repository": "coreyhaines31/marketingskills",
+      "path": "skills/seo-audit/SKILL.md",
+      "reviewed_commit": "3617bdc883230c2eec6cd77721987f71650902e5",
+      "reviewed_source_url": "https://raw.githubusercontent.com/coreyhaines31/marketingskills/3617bdc883230c2eec6cd77721987f71650902e5/skills/seo-audit/SKILL.md",
+      "status": "not_checked_due_to_limit",
+      "error": "Public upstream access limited: HTTP 403; no retry"
+    },
+    {
+      "skills": [
+        "web-search-strategy"
+      ],
+      "repository": "davila7/claude-code-templates",
+      "path": "cli-tool/components/agents/ai-specialists/search-specialist.md",
+      "reviewed_commit": "028931d584e7c1c8aa9700ba24e9ca885e8eabe0",
+      "reviewed_source_url": "https://raw.githubusercontent.com/davila7/claude-code-templates/028931d584e7c1c8aa9700ba24e9ca885e8eabe0/cli-tool/components/agents/ai-specialists/search-specialist.md",
+      "status": "not_checked_due_to_limit",
+      "error": "Public upstream access limited: HTTP 403; no retry"
+    },
+    {
+      "skills": [
+        "market-customer-research"
+      ],
+      "repository": "davila7/claude-code-templates",
+      "path": "cli-tool/components/agents/business-marketing/market-researcher.md",
+      "reviewed_commit": "028931d584e7c1c8aa9700ba24e9ca885e8eabe0",
+      "reviewed_source_url": "https://raw.githubusercontent.com/davila7/claude-code-templates/028931d584e7c1c8aa9700ba24e9ca885e8eabe0/cli-tool/components/agents/business-marketing/market-researcher.md",
+      "status": "not_checked_due_to_limit",
+      "error": "Public upstream access limited: HTTP 403; no retry"
+    },
+    {
+      "skills": [
+        "trend-analysis"
+      ],
+      "repository": "davila7/claude-code-templates",
+      "path": "cli-tool/components/agents/business-marketing/trend-analyst.md",
+      "reviewed_commit": "028931d584e7c1c8aa9700ba24e9ca885e8eabe0",
+      "reviewed_source_url": "https://raw.githubusercontent.com/davila7/claude-code-templates/028931d584e7c1c8aa9700ba24e9ca885e8eabe0/cli-tool/components/agents/business-marketing/trend-analyst.md",
+      "status": "not_checked_due_to_limit",
+      "error": "Public upstream access limited: HTTP 403; no retry"
+    },
+    {
+      "skills": [
+        "competitive-intelligence"
+      ],
+      "repository": "davila7/claude-code-templates",
+      "path": "cli-tool/components/agents/deep-research-team/competitive-intelligence-analyst.md",
+      "reviewed_commit": "028931d584e7c1c8aa9700ba24e9ca885e8eabe0",
+      "reviewed_source_url": "https://raw.githubusercontent.com/davila7/claude-code-templates/028931d584e7c1c8aa9700ba24e9ca885e8eabe0/cli-tool/components/agents/deep-research-team/competitive-intelligence-analyst.md",
+      "status": "not_checked_due_to_limit",
+      "error": "Public upstream access limited: HTTP 403; no retry"
+    },
+    {
+      "skills": [
+        "source-fact-checking"
+      ],
+      "repository": "davila7/claude-code-templates",
+      "path": "cli-tool/components/agents/deep-research-team/fact-checker.md",
+      "reviewed_commit": "028931d584e7c1c8aa9700ba24e9ca885e8eabe0",
+      "reviewed_source_url": "https://raw.githubusercontent.com/davila7/claude-code-templates/028931d584e7c1c8aa9700ba24e9ca885e8eabe0/cli-tool/components/agents/deep-research-team/fact-checker.md",
+      "status": "not_checked_due_to_limit",
+      "error": "Public upstream access limited: HTTP 403; no retry"
+    },
+    {
+      "skills": [
+        "ab-test-setup"
+      ],
+      "repository": "davila7/claude-code-templates",
+      "path": "cli-tool/components/skills/business-marketing/ab-test-setup/SKILL.md",
+      "reviewed_commit": "ec126b9ded118ba66c2125fa39eb5b0e87d701bd",
+      "reviewed_source_url": "https://raw.githubusercontent.com/davila7/claude-code-templates/ec126b9ded118ba66c2125fa39eb5b0e87d701bd/cli-tool/components/skills/business-marketing/ab-test-setup/SKILL.md",
+      "status": "not_checked_due_to_limit",
+      "error": "Public upstream access limited: HTTP 403; no retry"
+    },
+    {
+      "skills": [
+        "analytics-tracking"
+      ],
+      "repository": "davila7/claude-code-templates",
+      "path": "cli-tool/components/skills/business-marketing/analytics-tracking/SKILL.md",
+      "reviewed_commit": "ec126b9ded118ba66c2125fa39eb5b0e87d701bd",
+      "reviewed_source_url": "https://raw.githubusercontent.com/davila7/claude-code-templates/ec126b9ded118ba66c2125fa39eb5b0e87d701bd/cli-tool/components/skills/business-marketing/analytics-tracking/SKILL.md",
+      "status": "not_checked_due_to_limit",
+      "error": "Public upstream access limited: HTTP 403; no retry"
+    },
+    {
+      "skills": [
+        "competitor-alternatives"
+      ],
+      "repository": "davila7/claude-code-templates",
+      "path": "cli-tool/components/skills/business-marketing/competitor-alternatives/SKILL.md",
+      "reviewed_commit": "ec126b9ded118ba66c2125fa39eb5b0e87d701bd",
+      "reviewed_source_url": "https://raw.githubusercontent.com/davila7/claude-code-templates/ec126b9ded118ba66c2125fa39eb5b0e87d701bd/cli-tool/components/skills/business-marketing/competitor-alternatives/SKILL.md",
+      "status": "not_checked_due_to_limit",
+      "error": "Public upstream access limited: HTTP 403; no retry"
+    },
+    {
+      "skills": [
+        "copywriting"
+      ],
+      "repository": "davila7/claude-code-templates",
+      "path": "cli-tool/components/skills/business-marketing/copywriting/SKILL.md",
+      "reviewed_commit": "ec126b9ded118ba66c2125fa39eb5b0e87d701bd",
+      "reviewed_source_url": "https://raw.githubusercontent.com/davila7/claude-code-templates/ec126b9ded118ba66c2125fa39eb5b0e87d701bd/cli-tool/components/skills/business-marketing/copywriting/SKILL.md",
+      "status": "not_checked_due_to_limit",
+      "error": "Public upstream access limited: HTTP 403; no retry"
+    },
+    {
+      "skills": [
+        "free-tool-strategy"
+      ],
+      "repository": "davila7/claude-code-templates",
+      "path": "cli-tool/components/skills/business-marketing/free-tool-strategy/SKILL.md",
+      "reviewed_commit": "ec126b9ded118ba66c2125fa39eb5b0e87d701bd",
+      "reviewed_source_url": "https://raw.githubusercontent.com/davila7/claude-code-templates/ec126b9ded118ba66c2125fa39eb5b0e87d701bd/cli-tool/components/skills/business-marketing/free-tool-strategy/SKILL.md",
+      "status": "not_checked_due_to_limit",
+      "error": "Public upstream access limited: HTTP 403; no retry"
+    },
+    {
+      "skills": [
+        "launch-strategy"
+      ],
+      "repository": "davila7/claude-code-templates",
+      "path": "cli-tool/components/skills/business-marketing/launch-strategy/SKILL.md",
+      "reviewed_commit": "ec126b9ded118ba66c2125fa39eb5b0e87d701bd",
+      "reviewed_source_url": "https://raw.githubusercontent.com/davila7/claude-code-templates/ec126b9ded118ba66c2125fa39eb5b0e87d701bd/cli-tool/components/skills/business-marketing/launch-strategy/SKILL.md",
+      "status": "not_checked_due_to_limit",
+      "error": "Public upstream access limited: HTTP 403; no retry"
+    },
+    {
+      "skills": [
+        "lead-research-assistant"
+      ],
+      "repository": "davila7/claude-code-templates",
+      "path": "cli-tool/components/skills/business-marketing/lead-research-assistant/SKILL.md",
+      "reviewed_commit": "ec126b9ded118ba66c2125fa39eb5b0e87d701bd",
+      "reviewed_source_url": "https://raw.githubusercontent.com/davila7/claude-code-templates/ec126b9ded118ba66c2125fa39eb5b0e87d701bd/cli-tool/components/skills/business-marketing/lead-research-assistant/SKILL.md",
+      "status": "not_checked_due_to_limit",
+      "error": "Public upstream access limited: HTTP 403; no retry"
+    },
+    {
+      "skills": [
+        "page-cro"
+      ],
+      "repository": "davila7/claude-code-templates",
+      "path": "cli-tool/components/skills/business-marketing/page-cro/SKILL.md",
+      "reviewed_commit": "ec126b9ded118ba66c2125fa39eb5b0e87d701bd",
+      "reviewed_source_url": "https://raw.githubusercontent.com/davila7/claude-code-templates/ec126b9ded118ba66c2125fa39eb5b0e87d701bd/cli-tool/components/skills/business-marketing/page-cro/SKILL.md",
+      "status": "not_checked_due_to_limit",
+      "error": "Public upstream access limited: HTTP 403; no retry"
+    },
+    {
+      "skills": [
+        "pricing-strategy"
+      ],
+      "repository": "davila7/claude-code-templates",
+      "path": "cli-tool/components/skills/business-marketing/pricing-strategy/SKILL.md",
+      "reviewed_commit": "ec126b9ded118ba66c2125fa39eb5b0e87d701bd",
+      "reviewed_source_url": "https://raw.githubusercontent.com/davila7/claude-code-templates/ec126b9ded118ba66c2125fa39eb5b0e87d701bd/cli-tool/components/skills/business-marketing/pricing-strategy/SKILL.md",
+      "status": "not_checked_due_to_limit",
+      "error": "Public upstream access limited: HTTP 403; no retry"
+    },
+    {
+      "skills": [
+        "product-manager-toolkit"
+      ],
+      "repository": "davila7/claude-code-templates",
+      "path": "cli-tool/components/skills/business-marketing/product-manager-toolkit/SKILL.md",
+      "reviewed_commit": "ec126b9ded118ba66c2125fa39eb5b0e87d701bd",
+      "reviewed_source_url": "https://raw.githubusercontent.com/davila7/claude-code-templates/ec126b9ded118ba66c2125fa39eb5b0e87d701bd/cli-tool/components/skills/business-marketing/product-manager-toolkit/SKILL.md",
+      "status": "not_checked_due_to_limit",
+      "error": "Public upstream access limited: HTTP 403; no retry"
+    },
+    {
+      "skills": [
+        "seo-audit"
+      ],
+      "repository": "davila7/claude-code-templates",
+      "path": "cli-tool/components/skills/business-marketing/seo-audit/SKILL.md",
+      "reviewed_commit": "ec126b9ded118ba66c2125fa39eb5b0e87d701bd",
+      "reviewed_source_url": "https://raw.githubusercontent.com/davila7/claude-code-templates/ec126b9ded118ba66c2125fa39eb5b0e87d701bd/cli-tool/components/skills/business-marketing/seo-audit/SKILL.md",
+      "status": "not_checked_due_to_limit",
+      "error": "Public upstream access limited: HTTP 403; no retry"
+    },
+    {
+      "skills": [
+        "cohort-analysis"
+      ],
+      "repository": "phuryn/pm-skills",
+      "path": "pm-data-analytics/skills/cohort-analysis/SKILL.md",
+      "reviewed_commit": "8607e3b077817f89bf4a9b623246219734ac3be0",
+      "reviewed_source_url": "https://raw.githubusercontent.com/phuryn/pm-skills/8607e3b077817f89bf4a9b623246219734ac3be0/pm-data-analytics/skills/cohort-analysis/SKILL.md",
+      "status": "not_checked_due_to_limit",
+      "error": "Public upstream access limited: HTTP 403; no retry"
+    }
+  ],
+  "passed": false,
+  "needs_review": true
+}
